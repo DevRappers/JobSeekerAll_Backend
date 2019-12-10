@@ -22,7 +22,7 @@ type User {
 
 type Study {
 	id: ID!
-	user: User
+	user: User!
 	title: String!
 	caption: String!
 	information: String!
@@ -43,6 +43,7 @@ type Hobby {
 	proImage: String
 	user: User
 	posts: [Post!]!
+	postsCount: Int!
 	information: String!
 	createdAt: String
 	updatedAt: String

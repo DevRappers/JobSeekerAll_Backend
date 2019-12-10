@@ -21,7 +21,7 @@ type User {
 
 type Study{
   id: ID! @id
-  user: User @relation(name: "StudyOfUser")
+  user: User! @relation(name: "StudyOfUser")
   title: String! @unique
   caption: String!
   information: String!
