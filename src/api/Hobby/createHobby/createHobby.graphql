@@ -1,0 +1,7 @@
+type Mutation {
+	createHobby(title: String!, caption: String!, information: String!, area: String!, proImage: String): Boolean!
+}
+
+type Query {
+	something: String!
+}
