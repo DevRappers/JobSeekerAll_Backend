@@ -1,0 +1,16 @@
+enum ACTIONS {
+	EDIT
+	DELETE
+}
+
+type Mutation {
+	editHobby(
+		id: String!
+		title: String
+		caption: String
+		area: String
+		proImage: String
+		information: String
+		action: ACTIONS!
+	): Hobby!
+}

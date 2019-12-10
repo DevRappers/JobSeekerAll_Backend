@@ -1,0 +1,18 @@
+enum ACTIONS {
+	EDIT
+	DELETE
+}
+
+type Mutation {
+	editStudy(
+		id: String!
+		title: String
+		caption: String
+		information: String
+		job: String
+		area: String
+		startTime: String
+		endTime: String
+		action: ACTIONS!
+	): Study!
+}

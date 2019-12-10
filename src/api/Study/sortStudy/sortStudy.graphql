@@ -1,0 +1,3 @@
+type Query {
+	sortStudy(job: String, area: String): [Study!]!
+}
