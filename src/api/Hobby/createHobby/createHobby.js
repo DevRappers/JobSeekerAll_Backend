@@ -2,7 +2,8 @@ import { prisma } from '../../../../generated/prisma-client';
 
 export default {
 	Mutation: {
-		createHobby: async (_, args, { request }) => {
+		createHobby: async (_, args, { request, isAuthenticated }) => {
+			isAuthenticated(request);
 			const { title, caption, information, area, proImage = '' } = args;
 			const { user } = request;
 

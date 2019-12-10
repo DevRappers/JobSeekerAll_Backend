@@ -27,8 +27,10 @@ type Study {
 	caption: String!
 	information: String!
 	job: String!
+	area: String!
 	startTime: String!
 	endTime: String!
+	studyEnd: String
 	createdAt: String
 	updatedAt: String
 }

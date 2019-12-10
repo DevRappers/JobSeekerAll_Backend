@@ -1,0 +1,15 @@
+type Mutation {
+	createStudy(
+		title: String!
+		caption: String!
+		information: String!
+		job: String!
+		area: String!
+		startTime: String!
+		endTime: String!
+	): Boolean!
+}
+
+type Query {
+	something: String!
+}

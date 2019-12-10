@@ -22,19 +22,21 @@ type User {
 type Study{
   id: ID! @id
   user: User @relation(name: "StudyOfUser")
-  title: String!
+  title: String! @unique
   caption: String!
   information: String!
   job: String!
+  area:String!
   startTime: DateTime!
   endTime: DateTime!
+  studyEnd: String @default(value: "0")
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 }
 
 type Hobby{
   id: ID! @id
-  title: String!
+  title: String! @unique
   caption: String!
   area: String!
   proImage: String @default(value: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt6uh88PUrYZ3y4JJ2HuEuPT534d99bJvTcDEzvTT2h_VVcf2YSw&s")
