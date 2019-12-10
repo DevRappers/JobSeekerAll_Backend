@@ -106,3 +106,4 @@ dist
 # 추가 
 generated
 prisma.yml
+src/crpto.js
