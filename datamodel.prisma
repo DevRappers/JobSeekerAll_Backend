@@ -41,6 +41,8 @@ type Hobby{
   user: User @relation(name: "HobbyOfUser")
   posts: [Post!]! @relation(name: "PostOfHobby", onDelete: CASCADE)
   information: String!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
 }
 
 type Post {
@@ -48,7 +50,7 @@ type Post {
   location: String
   caption: String!
   field: String!
-  hobby: Hobby @relation(name: "PostOfHobby")
+  hobby: Hobby! @relation(name: "PostOfHobby")
   files: [File!]! @relation(name: "FileOfPost" onDelete: CASCADE)
   likes: [Like!]! @relation(name: "LikeOfPost" onDelete: CASCADE)
   comments: [Comment!]! @relation(name: "CommentsOfPost" onDelete: CASCADE)

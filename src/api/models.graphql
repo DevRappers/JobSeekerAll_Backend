@@ -1,0 +1,108 @@
+type User {
+	id: ID!
+	password: String!
+	avatar: String
+	username: String!
+	email: String!
+	phoneNumber: String
+	age: Int!
+	area: String
+	department: String!
+	firstLogin: String
+	emailSecret: String
+	myStudy: [Study!]!
+	myHobby: [Hobby!]!
+	comments: [Comment!]!
+	likes: [Like!]!
+	chatRoom: [Room!]!
+	isSelf: Boolean!
+	createdAt: String
+	updatedAt: String
+}
+
+type Study {
+	id: ID!
+	user: User
+	title: String!
+	caption: String!
+	information: String!
+	job: String!
+	startTime: String!
+	endTime: String!
+	createdAt: String
+	updatedAt: String
+}
+
+type Hobby {
+	id: ID!
+	title: String!
+	caption: String!
+	area: String!
+	proImage: String
+	user: User
+	posts: [Post!]!
+	information: String!
+	createdAt: String
+	updatedAt: String
+}
+
+type Post {
+	id: ID!
+	location: String
+	caption: String!
+	field: String!
+	hobby: Hobby!
+	files: [File!]!
+	likes: [Like!]!
+	comments: [Comment!]!
+	likeCount: Int!
+	isLiked: Boolean!
+	commentCount: Int!
+	createdAt: String
+	updatedAt: String
+}
+
+type Comment {
+	id: ID!
+	text: String!
+	parent: [Comment!]
+	child: [Comment!]
+	user: User
+	post: Post!
+	createdAt: String
+	updatedAt: String
+}
+
+type Like {
+	id: ID!
+	user: User!
+	post: Post!
+	createdAt: String
+	updatedAt: String
+}
+
+type File {
+	id: ID!
+	url: String!
+	post: Post
+	createdAt: String
+	updatedAt: String
+}
+
+type Room {
+	id: ID!
+	participants: [User!]!
+	messages: [Message!]!
+	createdAt: String
+	updatedAt: String
+}
+
+type Message {
+	id: ID!
+	text: String!
+	from: User!
+	to: User!
+	room: Room!
+	createdAt: String
+	updatedAt: String
+}
