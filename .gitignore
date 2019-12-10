@@ -107,3 +107,4 @@ dist
 generated
 prisma.yml
 src/crpto.js
+src/word.js
