@@ -15,6 +15,7 @@ type User {
 	comments: [Comment!]!
 	likes: [Like!]!
 	chatRoom: [Room!]!
+	posts: [Post!]!
 	isSelf: Boolean!
 	createdAt: String
 	updatedAt: String
@@ -54,6 +55,7 @@ type Post {
 	location: String
 	caption: String!
 	hobby: Hobby!
+	user: User!
 	files: [File!]!
 	likes: [Like!]!
 	comments: [Comment!]!
