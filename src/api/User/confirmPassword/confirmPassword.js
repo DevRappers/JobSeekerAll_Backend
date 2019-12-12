@@ -21,9 +21,10 @@ export default {
 				if (user.firstLogin === '1') {
 					return generateToken(user.id);
 				} else {
-					return '이메일 인증이 필요합니다.';
+					return '2';
 				}
 			} else {
+				return '3';
 				throw Error('비밀번호가 잘못되었습니다.');
 			}
 		}
