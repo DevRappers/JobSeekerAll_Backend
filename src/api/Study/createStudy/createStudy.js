@@ -4,7 +4,7 @@ export default {
 	Mutation: {
 		createStudy: async (_, args, { request, isAuthenticated }) => {
 			isAuthenticated(request);
-			const { title, caption, information, job, area, startTime, endTime } = args;
+			const { title, caption, information, job, area, time } = args;
 			const { user } = request;
 
 			// study의 title이름이 중복되는지 확인함
@@ -22,8 +22,7 @@ export default {
 				information,
 				job,
 				area,
-				startTime,
-				endTime,
+				time,
 				user: {
 					connect: {
 						id: user.id

@@ -7,7 +7,7 @@ export default {
 	Mutation: {
 		editStudy: async (_, args, { request, isAuthenticated }) => {
 			isAuthenticated(request);
-			const { id, title, caption, information, job, area, startTime, endTime, action } = args;
+			const { id, title, caption, information, job, area, time, action } = args;
 			const { user } = request;
 
 			const study = await prisma.$exists.study({ id, user: { id: user.id } });
@@ -15,7 +15,7 @@ export default {
 			if (study) {
 				if (action === EDIT) {
 					return prisma.updateStudy({
-						data: { title, caption, information, job, area, startTime, endTime },
+						data: { title, caption, information, job, area, time },
 						where: { id }
 					});
 				} else if (action === DELETE) {

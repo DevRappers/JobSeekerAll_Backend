@@ -28,9 +28,8 @@ type Study{
   information: String!
   job: String!
   area:String!
-  startTime: DateTime!
-  endTime: DateTime!
   studyEnd: String @default(value: "0")
+  time: String!
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 }

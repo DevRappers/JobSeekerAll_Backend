@@ -1,0 +1,3 @@
+type Query {
+	seeFullStudy(id: String!): Study!
+}

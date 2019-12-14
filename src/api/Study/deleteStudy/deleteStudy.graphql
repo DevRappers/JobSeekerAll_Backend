@@ -1,0 +1,3 @@
+type Mutation {
+	deleteStudy(id: String!): Boolean!
+}

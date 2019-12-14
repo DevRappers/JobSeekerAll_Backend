@@ -29,9 +29,9 @@ type Study {
 	information: String!
 	job: String!
 	area: String!
-	startTime: String!
-	endTime: String!
+	time: String!
 	studyEnd: String
+	isMyStudy: Boolean!
 	createdAt: String
 	updatedAt: String
 }

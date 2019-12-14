@@ -5,8 +5,7 @@ type Mutation {
 		information: String!
 		job: String!
 		area: String!
-		startTime: String!
-		endTime: String!
+		time: String!
 	): Boolean!
 }
 
