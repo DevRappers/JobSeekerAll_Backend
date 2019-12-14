@@ -13,12 +13,14 @@ export default {
 			const study = await prisma.$exists.study({ id, user: { id: user.id } });
 
 			if (study) {
-				return prisma.updateStudy({
-					data: { studyEnd: '2' },
+				await prisma.updateStudy({
+					data: { studyEnd: 2 },
 					where: { id }
 				});
+				return true;
 			} else {
 				throw Error('오류발생! 해당하는 스터디가 없습니다.');
+				return false;
 			}
 		}
 	}
