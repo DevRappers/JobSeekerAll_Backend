@@ -1,8 +1,3 @@
-enum ACTIONS {
-	EDIT
-	DELETE
-}
-
 type Mutation {
 	editStudy(
 		id: String!
@@ -12,6 +7,5 @@ type Mutation {
 		job: String
 		area: String
 		time: String
-		action: ACTIONS!
-	): Study!
+	): Boolean!
 }
