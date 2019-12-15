@@ -3,7 +3,7 @@ import { prisma } from '../../../generated/prisma-client';
 export default {
 	User: {
 		posts: ({ id }) => prisma.user({ id }).posts(),
-		myStudy: ({ id }) => prisma.user({ id }).myStudy(),
+		myStudy: ({ id }) => prisma.user({ id }).myStudy({ orderBy: 'studyEnd_ASC' }),
 		myHobby: ({ id }) => prisma.user({ id }).myHobby(),
 		likes: ({ id }) => prisma.user({ id }).likes(),
 		comments: ({ id }) => prisma.user({ id }).comments(),
