@@ -1,0 +1,3 @@
+type Query {
+	seeFullHobby(id: String!): Hobby!
+}

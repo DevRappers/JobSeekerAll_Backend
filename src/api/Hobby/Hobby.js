@@ -2,8 +2,8 @@ import { prisma } from '../../../generated/prisma-client';
 
 export default {
 	Hobby: {
-		posts: ({ id }) => prisma.hobby({ id }).posts(),
-		comments: ({ id }) => prisma.hobby({ id }).comments(),
+		posts: ({ id }) => prisma.hobby({ id }).posts({ orderBy: 'createdAt_DESC' }),
+		comments: ({ id }) => prisma.hobby({ id }).comments({ orderBy: 'createdAt_DESC' }),
 		postsCount: ({ id }) => prisma.postsConnection({ where: { hobby: { id } } }).aggregate().count(),
 		user: ({ id }) => prisma.hobby({ id }).user(),
 		isMyHobby: async (parent, _, { request }) => {
