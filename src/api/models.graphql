@@ -46,6 +46,7 @@ type Hobby {
 	posts: [Post!]!
 	postsCount: Int!
 	information: String!
+	isMyHobby: Boolean!
 	createdAt: String
 	updatedAt: String
 }
