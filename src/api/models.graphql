@@ -44,6 +44,8 @@ type Hobby {
 	proImage: String
 	user: User
 	posts: [Post!]!
+	comments: [Comment!]!
+	commentCount: Int!
 	postsCount: Int!
 	information: String!
 	isMyHobby: Boolean!
@@ -53,16 +55,14 @@ type Hobby {
 
 type Post {
 	id: ID!
-	location: String
+	title: String!
 	caption: String!
 	hobby: Hobby!
 	user: User!
 	files: [File!]!
 	likes: [Like!]!
-	comments: [Comment!]!
 	likeCount: Int!
 	isLiked: Boolean!
-	commentCount: Int!
 	createdAt: String
 	updatedAt: String
 }
@@ -73,7 +73,8 @@ type Comment {
 	parent: [Comment!]
 	child: [Comment!]
 	user: User
-	post: Post!
+	hobby: Hobby!
+	isMyComment: Boolean!
 	createdAt: String
 	updatedAt: String
 }

@@ -5,14 +5,14 @@ export default {
 		upload: async (_, args, { request, isAuthenticated }) => {
 			isAuthenticated(request);
 			const { user } = request;
-			const { caption, location, files, hId } = args;
+			const { caption, title, files, hId } = args;
 
 			const existHobby = prisma.$exists.hobby({ id: hId, user: { id: user.id } });
 
 			if (existHobby) {
 				const post = await prisma.createPost({
 					caption,
-					location,
+					title,
 					hobby: {
 						connect: {
 							id: hId

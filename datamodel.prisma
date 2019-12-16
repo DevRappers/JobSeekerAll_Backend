@@ -42,6 +42,7 @@ type Hobby{
   proImage: String @default(value: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt6uh88PUrYZ3y4JJ2HuEuPT534d99bJvTcDEzvTT2h_VVcf2YSw&s")
   user: User @relation(name: "HobbyOfUser")
   posts: [Post!]! @relation(name: "PostOfHobby", onDelete: CASCADE)
+  comments: [Comment!]! @relation(name: "CommentsOfHobby" onDelete: CASCADE)
   information: String!
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
@@ -49,13 +50,12 @@ type Hobby{
 
 type Post {
   id: ID! @id
-  location: String
+  title: String!
   caption: String!
   user: User @relation(name: "PostOfUser")
   hobby: Hobby! @relation(name: "PostOfHobby")
   files: [File!]! @relation(name: "FileOfPost" onDelete: CASCADE)
   likes: [Like!]! @relation(name: "LikeOfPost" onDelete: CASCADE)
-  comments: [Comment!]! @relation(name: "CommentsOfPost" onDelete: CASCADE)
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 }
@@ -66,7 +66,7 @@ type Comment{
   parent: [Comment!] @relation(name: "CommentRelation")
   child: [Comment!] @relation(name: "CommentRelation")
   user: User @relation(name: "CommentsOfUser")
-  post: Post! @relation(name: "CommentsOfPost")
+  hobby: Hobby! @relation(name: "CommentsOfHobby")
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 }
