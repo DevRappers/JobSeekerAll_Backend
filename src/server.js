@@ -6,7 +6,7 @@ import { authenticateJwt } from './passport';
 import { isAuthenticated } from './middlewares';
 import './env';
 import { uploadMiddleware, uploadController } from './upload';
-
+import express from 'express';
 // env에 PORT가 지정되어 있지 않다면 4000번으로 설정
 const PORT = process.env.PORT || 4000;
 
