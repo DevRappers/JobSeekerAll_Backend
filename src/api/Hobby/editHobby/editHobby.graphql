@@ -1,8 +1,3 @@
-enum ACTIONS {
-	EDIT
-	DELETE
-}
-
 type Mutation {
 	editHobby(
 		id: String!
@@ -11,6 +6,5 @@ type Mutation {
 		area: String
 		proImage: String
 		information: String
-		action: ACTIONS!
-	): Hobby!
+	): Boolean!
 }

@@ -17,6 +17,11 @@ export default {
 						connect: {
 							id: hId
 						}
+					},
+					user: {
+						connect: {
+							id: user.id
+						}
 					}
 				});
 				// 파일 목록 생성
@@ -30,7 +35,7 @@ export default {
 						}
 					});
 				});
-				return post;
+				return true;
 			} else {
 				throw Error('권한이없습니다.');
 			}
