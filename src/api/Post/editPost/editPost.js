@@ -13,7 +13,7 @@ export default {
 					where: { id }
 				});
 
-				await prisma.updateFile({
+				await prisma.updateManyFiles({
 					data: { url: file },
 					where: {
 						post: {
