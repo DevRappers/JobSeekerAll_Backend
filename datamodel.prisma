@@ -104,3 +104,12 @@ type Message{
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 }
+
+type AdminPost{
+  id: ID! @id
+  img: String!
+  title: String!
+  caption: String!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}

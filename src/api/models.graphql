@@ -113,3 +113,12 @@ type Message {
 	createdAt: String
 	updatedAt: String
 }
+
+type AdminPost {
+	id: ID!
+	img: String!
+	title: String!
+	caption: String!
+	createdAt: String
+	updatedAt: String
+}
