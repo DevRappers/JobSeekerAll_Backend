@@ -9,6 +9,7 @@
         "@babel/core": "^7.7.5",
         "@babel/node": "^7.7.4",
         "@babel/preset-env": "^7.7.6",
+        "aws-sdk": "^2.594.0",
         "dotenv": "^8.2.0",
         "graphql-tools": "^4.0.6",
         "graphql-yoga": "^1.18.3",
