@@ -27,8 +27,8 @@ export const sendSecretMail = (address, secret) => {
 	const email = {
 		from: 'admin@jobseekerall.com',
 		to: address,
-		subject: '🗝 취준왕 첫 로그인 이메일 인증을 완료해주세요.',
-		html: `취준왕 가입을 진심으로 축하드립니다.<br/>
+		subject: '🗝 취준모아 첫 로그인 이메일 인증을 완료해주세요.',
+		html: `취준모아 가입을 진심으로 축하드립니다.<br/>
         첫 로그인시에는 이메일인증이 필요합니다. 하단의 시크릿코드를 사이트에서 입력해주세요.<br/><br/>
         <strong>${secret}</strong><br/><br/>
         코드를 복사해서 앱 또는 웹사이트에 붙여넣어주세요.<br/>
