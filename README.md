@@ -1,2 +1,2 @@
 # JobSeekerAll_Backend
-취준생의 모든것을 담은 프로젝트 Backend
+GraphQL + Prisma를 통해 만든 취준모아 Backend
